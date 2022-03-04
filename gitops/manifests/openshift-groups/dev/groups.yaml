@@ -3,46 +3,31 @@ items:
 - apiVersion: user.openshift.io/v1
   kind: Group
   metadata:
-    name: MEGA-APP
+    name: group1
     namespace: ""
   users:
-  - P1ARL01
-  - P1JAG04
-  - P1MXH09
-  - P1SXD05
-  - C1KXR04
-  - G1MSA01
-  - C1RMB03
+  - user1
 - apiVersion: user.openshift.io/v1
   kind: Group
   metadata:
-    name: liberty-fw
+    name: group2
     namespace: ""
   users:
-  - B1AIP01
-  - B1AXK23
-  - B1KXH14
-  - B1LXN04
-  - B1MLLFT
-  - B1MXJ14
-  - B1SXD03
-  - B1VXAFT
-  - B1JXPFT
-  - P1PWR01
+  - user2
 - apiVersion: user.openshift.io/v1
   kind: Group
   metadata:
-    name: nit-gitops
+    name: group3
     namespace: ""
   users:
-  - P1PWR01
+  - user3
 - apiVersion: user.openshift.io/v1
   kind: Group
   metadata:
-    name: sf-dev
+    name: group4
     namespace: ""
   users:
-  - L1KXN03
+  - user4
 kind: List
 metadata:
   resourceVersion: ""
