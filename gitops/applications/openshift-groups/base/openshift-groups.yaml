@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openshift-groups
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+spec:
+  destination:
+    namespace: openshift-gitops
+    server: https://kubernetes.default.svc
+  project: cluster-config
+  source:
+    path: gitops/manifests/openshift-groups/overlays/dev
+    repoURL: git@github.com:praspa/ocp4-gitops-demo.git
+    targetRevision: master
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true

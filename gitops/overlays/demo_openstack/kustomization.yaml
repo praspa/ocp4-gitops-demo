@@ -6,5 +6,6 @@ namespace: openshift-gitops
 bases:
 - ../../projects/cluster-config/base
 - ../../applications/openshift-pipelines-operator/base
+- ../../applications/openshift-groups/base
 
 
