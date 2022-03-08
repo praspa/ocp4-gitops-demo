@@ -10,7 +10,7 @@ spec:
     server: https://kubernetes.default.svc
   project: cluster-config
   source:
-    path: gitops/manifests/openshift-groups/overlays/dev
+    path: gitops/manifests/openshift-groups/dev
     repoURL: git@github.com:praspa/ocp4-gitops-demo.git
     targetRevision: main
   syncPolicy:
