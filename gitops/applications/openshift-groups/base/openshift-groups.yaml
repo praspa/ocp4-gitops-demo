@@ -12,7 +12,7 @@ spec:
   source:
     path: gitops/manifests/openshift-groups/overlays/dev
     repoURL: git@github.com:praspa/ocp4-gitops-demo.git
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     automated:
       prune: false
