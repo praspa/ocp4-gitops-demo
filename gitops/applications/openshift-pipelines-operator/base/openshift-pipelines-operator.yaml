@@ -10,7 +10,7 @@ spec:
     server: https://kubernetes.default.svc
   project: cluster-config
   source:
-    path: gitops/manifests/openshift-pipelines-operator/base
+    path: gitops/manifests/openshift-pipelines-operator/overlays/stable
     repoURL: git@github.com:praspa/ocp4-gitops-demo.git
     targetRevision: main
   syncPolicy:

@@ -5,3 +5,9 @@ resources:
 - openshift-gitops-namespace.yaml
 - openshift-operators.yaml
 - openshift-gitops-operator-subscription.yaml
+- cli-job-sa.yaml
+- cli-sa-rbac.yaml
+- openshift-storage-namespace.yaml
+- stackrox-namespace.yaml
+- quay-enterprise-namespace.yaml
+- acm-namespace.yaml
