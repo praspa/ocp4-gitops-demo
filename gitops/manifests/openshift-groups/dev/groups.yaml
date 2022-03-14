@@ -3,31 +3,36 @@ items:
 - apiVersion: user.openshift.io/v1
   kind: Group
   metadata:
-    name: group1
+    name: developers
     namespace: ""
   users:
-  - user1
+  - dev1
+  - dev2
 - apiVersion: user.openshift.io/v1
   kind: Group
   metadata:
-    name: group2
+    name: testers
     namespace: ""
   users:
-  - user2
+  - tester1
+  - tester2
 - apiVersion: user.openshift.io/v1
   kind: Group
   metadata:
-    name: group3
+    name: auditor
     namespace: ""
   users:
-  - user3
+  - audit1
+  - audit2
 - apiVersion: user.openshift.io/v1
   kind: Group
   metadata:
-    name: group4
+    name: devops-admins
     namespace: ""
   users:
-  - user4
+  - devops1
+  - devops2
+  - devops3
 kind: List
 metadata:
   resourceVersion: ""
