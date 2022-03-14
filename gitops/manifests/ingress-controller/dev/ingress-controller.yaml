@@ -1,0 +1,25 @@
+apiVersion: operator.openshift.io/v1
+kind: IngressController
+metadata:
+  name: default
+  namespace: openshift-ingress-operator
+spec:
+  logging:
+    access:
+      destination:
+        type: Container
+      httpLogFormat: '%ci:%cp [%t] %ft %b/%s %B %bq %HM %HU %HV'
+  tlsSecurityProfile: 
+    type: Modern
+  routeAdmission:
+    namespaceOwnership: InterNamespaceAllowed
+  clientTLS:
+    clientCA:
+      name: ""
+    clientCertificatePolicy: ""
+  httpEmptyRequestsPolicy: Respond
+  httpErrorCodePages:
+    name: ""
+  replicas: 2
+  tuningOptions: {}
+  unsupportedConfigOverrides: null
