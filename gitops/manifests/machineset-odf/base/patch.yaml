@@ -1,0 +1,23 @@
+- op: replace
+  path: /metadata/labels/machine.openshift.io~1cluster-api-cluster
+  value: "cluster-5vrxc-q4nt9"
+
+- op: replace
+  path: /spec/replicas
+  value: 3
+
+- op: replace
+  path: /spec/selector/matchLabels/machine.openshift.io~1cluster-api-cluster
+  value:  "cluster-5vrxc-q4nt9"
+
+- op: replace
+  path: /spec/selector/matchLabels/machine.openshift.io~1cluster-api-machineset
+  value: "cluster-5vrxc-q4nt9-odf-us-east-2c"
+
+- op: replace
+  path: /spec/template/metadata/labels/machine.openshift.io~1cluster-api-cluster
+  value: "cluster-5vrxc-q4nt9"
+
+- op: replace
+  path: /spec/template/metadata/labels/machine.openshift.io~1cluster-api-machineset
+  value: "cluster-5vrxc-q4nt9-odf-us-east-2c"
