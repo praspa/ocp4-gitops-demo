@@ -7,7 +7,7 @@ metadata:
     machine.openshift.io/vCPU: "16"
   labels:
     machine.openshift.io/cluster-api-cluster: cluster-5vrxc-q4nt9
-  name: cluster-5vrxc-q4nt9-odf-us-east-2c
+  name: cluster-odf-us-east-2c
   namespace: openshift-machine-api
 spec:
   replicas: 3
@@ -44,7 +44,7 @@ spec:
             name: aws-cloud-credentials
           deviceIndex: 0
           iamInstanceProfile:
-            id: cluster-5vrxc-q4nt9-worker-profile
+            id: cluster-zgd5c-8smm7-worker-profile
           instanceType: m5a.4xlarge
           kind: AWSMachineProviderConfig
           metadata:
@@ -56,26 +56,26 @@ spec:
           - filters:
             - name: tag:Name
               values:
-              - cluster-5vrxc-q4nt9-worker-sg
+              - cluster-zgd5c-8smm7-worker-sg
           subnet:
             filters:
             - name: tag:Name
               values:
-              - cluster-5vrxc-q4nt9-private-us-east-2c
+              - cluster-zgd5c-8smm7-private-us-east-2c
           tags:
-          - name: kubernetes.io/cluster/cluster-5vrxc-q4nt9
+          - name: kubernetes.io/cluster/cluster-zgd5c-8smm7
             value: owned
           - name: Stack
-            value: project ocp4-cluster-5vrxc
+            value: project ocp4-cluster-zgd5c
           - name: env_type
             value: ocp4-cluster
           - name: guid
-            value: 5vrxc
+            value: zgd5c
           - name: owner
             value: unknown
           - name: platform
             value: RHPDS
           - name: uuid
-            value: ceb3b4ce-1748-535e-a5bf-e296870d4725
+            value: f1d61ea6-4481-507b-ba90-049bb07ae77a
           userDataSecret:
             name: worker-user-data

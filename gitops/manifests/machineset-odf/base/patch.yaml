@@ -1,6 +1,14 @@
 - op: replace
+  path: /metadata/annotations/machine.openshift.io~1memoryMb
+  value: "65536"
+
+- op: replace
+  path: /metadata/annotations/machine.openshift.io~1vCPU
+  value: "16"
+
+- op: replace
   path: /metadata/labels/machine.openshift.io~1cluster-api-cluster
-  value: "cluster-5vrxc-q4nt9"
+  value: "cluster-zgd5c-8smm7"
 
 - op: replace
   path: /spec/replicas
@@ -8,16 +16,59 @@
 
 - op: replace
   path: /spec/selector/matchLabels/machine.openshift.io~1cluster-api-cluster
-  value:  "cluster-5vrxc-q4nt9"
+  value:  "cluster-zgd5c-8smm7"
 
 - op: replace
   path: /spec/selector/matchLabels/machine.openshift.io~1cluster-api-machineset
-  value: "cluster-5vrxc-q4nt9-odf-us-east-2c"
+  value: "cluster-zgd5c-8smm7-odf-us-east-2c"
 
 - op: replace
   path: /spec/template/metadata/labels/machine.openshift.io~1cluster-api-cluster
-  value: "cluster-5vrxc-q4nt9"
+  value: "cluster-zgd5c-8smm7"
 
 - op: replace
   path: /spec/template/metadata/labels/machine.openshift.io~1cluster-api-machineset
-  value: "cluster-5vrxc-q4nt9-odf-us-east-2c"
+  value: "cluster-zgd5c-8smm7-odf-us-east-2c"
+
+- op: replace
+  path: /spec/template/spec/providerSpec/value/ami/id
+  value: "ami-03d9208319c96db0c"
+
+- op: replace
+  path: /spec/template/spec/providerSpec/value/iamInstanceProfile/id
+  value: "cluster-zgd5c-8smm7-worker-profile"
+
+- op: replace
+  path: /spec/template/spec/providerSpec/value/placement/availabilityZone
+  value: "us-east-2c"
+
+- op: replace
+  path: /spec/template/spec/providerSpec/value/placement/region
+  value: "us-east-2c"
+
+- op: replace
+  path: /spec/template/spec/providerSpec/value/securityGroups/0/filters/0/values/0
+  value: "cluster-zgd5c-8smm7-worker-sg"
+
+- op: replace
+  path: /spec/template/spec/providerSpec/value/subnet/filters/0/values/0
+  value: "cluster-zgd5c-8smm7-private-us-east-2c"
+
+- op: replace
+  path: /spec/template/spec/providerSpec/value/tags/0/name
+  value: "kubernetes.io/cluster/cluster-zgd5c-8smm7"
+
+# STACK    
+- op: replace
+  path: /spec/template/spec/providerSpec/value/tags/1/value
+  value: "project ocp4-cluster-zgd5c"
+
+# GUID    
+- op: replace
+  path: /spec/template/spec/providerSpec/value/tags/3/value
+  value: "zgd5c"
+
+#UUID    
+- op: replace
+  path: /spec/template/spec/providerSpec/value/tags/6/value
+  value: "f1d61ea6-4481-507b-ba90-049bb07ae77a"

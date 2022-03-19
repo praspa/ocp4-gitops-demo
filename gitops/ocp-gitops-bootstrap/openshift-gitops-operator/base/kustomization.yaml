@@ -3,3 +3,5 @@ kind: Kustomization
 
 resources:
 - openshift-gitops-operator-subscription.yaml
+- cli-job-sa.yaml
+- cli-sa-rbac.yaml
