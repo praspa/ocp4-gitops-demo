@@ -6,7 +6,7 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "3"
 spec:
-  channel: stable-4.8
+  channel: stable-4.9
   installPlanApproval: Automatic
   name: ocs-operator
   source: patch-via-overlay

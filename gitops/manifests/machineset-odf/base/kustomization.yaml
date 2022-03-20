@@ -9,7 +9,7 @@ patchesJson6902:
     group: machine.openshift.io
     version: v1beta1
     kind: MachineSet
-    name: cluster-5vrxc-q4nt9-odf-us-east-2c
+    name: cluster-odf-us-east-2c
     namespace: openshift-machine-api
   path: patch.yaml
 
