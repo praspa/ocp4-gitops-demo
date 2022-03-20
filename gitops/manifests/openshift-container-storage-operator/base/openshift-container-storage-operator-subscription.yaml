@@ -9,5 +9,5 @@ spec:
   channel: stable-4.9
   installPlanApproval: Automatic
   name: ocs-operator
-  source: patch-via-overlay
+  source: redhat-operators
   sourceNamespace: openshift-marketplace
