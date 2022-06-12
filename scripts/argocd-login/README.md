@@ -1,11 +1,11 @@
-=== Argocd Login Script
+#  Argocd Login Script
 
 usage:
 
 Get argocd session token
 
 ~~~
-export token=$(python3 argocd-login.py -u <LDAP user name> -a <OpenShift GitOps Server URL>)
+$ export token=$(python3 argocd-login.py -u <LDAP user name> -a <OpenShift GitOps Server URL>)
 <enter LDAP Password When Prompted>
 ~~~
 
