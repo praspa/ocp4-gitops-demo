@@ -2,7 +2,7 @@
 
 ## Install
 
-RHEL7 isntall steps
+RHEL7 install steps
 
 ~~~
 $ sudo yum install rh-python36
