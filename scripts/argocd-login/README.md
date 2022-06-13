@@ -1,5 +1,19 @@
 #  Argocd Login Script
 
+## Install
+
+RHEL7 isntall steps
+
+~~~
+$ sudo yum install rh-python36
+
+$ scl enable rh-python36 bash
+$ pip install urllib3 --user --proxy <web proxy url if needed> 
+$ pip install requests --user --proxy <web proxy url if needed>
+~~~
+
+## Usage
+
 usage:
 
 Get argocd session token
