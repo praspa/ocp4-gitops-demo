@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: httpd
+  namespace: openshift-gitops-gstnonprod
+  annotations:
+    argocd.argoproj.io/sync-wave: "-1"
+spec:
+  destination:
+    namespace: demo
+    server: https://api.cluster-sflr9.sflr9.sandbox542.opentlc.com:6443
+  project: demo-appproject
+  source:
+    path: gitops/manifests/httpd/base
+    repoURL: git@github.com:praspa/ocp4-gitops-demo.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true

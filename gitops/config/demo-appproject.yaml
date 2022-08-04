@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: demo-appproject
+  namespace: openshift-gitops-gstnonprod
+spec:
+  description: Demo Developer Application Project
+  destinations:
+  - namespace: 'demo'
+    server: https://api.cluster-sflr9.sflr9.sandbox542.opentlc.com:6443
+  namespaceResourceBlacklist:
+    - group: '*'
+      kind: ResourceQuota
+  sourceRepos:
+  - git@github.com:praspa/ocp4-gitops-demo.git
